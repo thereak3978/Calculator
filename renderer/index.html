@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="calculadora">
+
+        <div class="display">
+            <p id="display">0</p>
+        </div>
+
+        <div class="teclado">
+
+            <button class="boton accion" id="btnClear">C</button>
+            <button class="boton accion" id="btnBorrar">⌫</button>
+            <button class="boton operacion" data-op="dividir">÷</button>
+            <button class="boton operacion" data-op="multiplicar">×</button>
+
+            <button class="boton numero">7</button>
+            <button class="boton numero">8</button>
+            <button class="boton numero">9</button>
+            <button class="boton operacion" data-op="restar">−</button>
+
+           
+            <button class="boton numero">4</button>
+            <button class="boton numero">5</button>
+            <button class="boton numero">6</button>
+            <button class="boton operacion" data-op="sumar">+</button>
+
+            
+            <button class="boton numero">1</button>
+            <button class="boton numero">2</button>
+            <button class="boton numero">3</button>
+            <button class="boton igual" id="btnIgual">=</button>
+
+          
+            <button class="boton numero">0</button>
+            <button class="boton numero">.</button>
+
+        </div>
+
+    </div>
+    <script src="renderer.js"></script>
+</body>
+
+</html>
