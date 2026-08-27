@@ -16,8 +16,9 @@ function createWindow(){
     })
 
     mainWindow.loadFile('renderer/index.html')
-    
+    //mainWindow.webContents.openDevTools();
 }
+    
 
 app.whenReady().then(() => {
     createWindow()

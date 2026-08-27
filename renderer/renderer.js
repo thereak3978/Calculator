@@ -16,6 +16,7 @@ botonesNumero.forEach((boton) => {
 
         primerNumero += boton.textContent
         display.textContent = primerNumero
+        console.log(primerNumero)
         
     })
 })
@@ -25,17 +26,8 @@ botonesOperacion.forEach((boton) =>{
     boton.addEventListener('click', async () => {
         
         operacion = boton.dataset.op
-        if (primerNumero === "") {
-            return
-        }
-
-        if (segundoNumero !== "" && operacion !== "") {
-            await calcular()
-            
-        } else {
-            segundoNumero = primerNumero
-            operacion= ""  
-        }
+        console.log(operacion)
+        segundoNumero = primerNumero
         primerNumero = ""
     })
 })
@@ -48,7 +40,7 @@ botonClear.addEventListener('click', () => { // ESTO LIMPIA EL DISPLAY :D
 })
 
 async function calcular() {
-    
+    console.log("num1:",primerNumero,"num2:",segundoNumero, "op: ",operacion)
     if (segundoNumero === "" || primerNumero === "" || operacion === "") {
     return;
     }
