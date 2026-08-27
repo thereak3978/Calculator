@@ -58,7 +58,7 @@ async function calcular() {
 
     const resultado = await window.api.calcular(datos)
     console.log('resultado:', resultado)
-    display.textContent = resultado
+    display.textContent = resultado.toLocaleString()
     primerNumero = ""
     segundoNumero = String(resultado) //Segundo numero almacena el resulatado
     operacion = ""
