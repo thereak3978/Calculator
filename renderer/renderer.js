@@ -14,9 +14,9 @@ botonIgual.addEventListener('click', calcular)
 botonesNumero.forEach((boton) => {
     boton.addEventListener('click', () => {
 
-        primerNumero += boton.textContent
-        display.textContent = primerNumero
-        console.log(primerNumero)
+        segundoNumero += boton.textContent
+        display.textContent = segundoNumero
+        console.log(segundoNumero)
         
     })
 })
@@ -27,9 +27,9 @@ botonesOperacion.forEach((boton) =>{
         
         operacion = boton.dataset.op
         console.log(operacion)
-        segundoNumero = primerNumero
-        primerNumero = ""
-    })
+        primerNumero = segundoNumero
+        segundoNumero = ""
+    }) 
 })
 
 botonClear.addEventListener('click', () => { // ESTO LIMPIA EL DISPLAY :D
@@ -54,7 +54,7 @@ async function calcular() {
     console.log('resultado:', resultado)
     display.textContent = resultado
     primerNumero = ""
-    segundoNumero = String(resultado)
+    segundoNumero = String(resultado) //Segundo numero almacena el resulatado
     return resultado
 }
 

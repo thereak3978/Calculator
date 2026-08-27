@@ -6,7 +6,7 @@ function createWindow(){
 
         width:365,
         height: 550,
-        resizable: false,
+        resizable: true,
         tittle: "calculator",
         webPreferences:{
             preload: path.join(__dirname, 'preload.js'),
@@ -16,7 +16,7 @@ function createWindow(){
     })
 
     mainWindow.loadFile('renderer/index.html')
-    //mainWindow.webContents.openDevTools();
+    mainWindow.webContents.openDevTools();
 }
     
 
