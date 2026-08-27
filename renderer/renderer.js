@@ -24,11 +24,17 @@ botonesNumero.forEach((boton) => {
 
 botonesOperacion.forEach((boton) =>{
     boton.addEventListener('click', async () => {
-        
+        if (primerNumero !== "" && segundoNumero !== "" && operacion !== "") {
+            await calcular()
+        }
+
+        if (segundoNumero !== "") {
+            primerNumero = segundoNumero
+            segundoNumero = ""
+        }
+
         operacion = boton.dataset.op
         console.log(operacion)
-        primerNumero = segundoNumero
-        segundoNumero = ""
     }) 
 })
 
@@ -55,13 +61,14 @@ async function calcular() {
     display.textContent = resultado
     primerNumero = ""
     segundoNumero = String(resultado) //Segundo numero almacena el resulatado
+    operacion = ""
     return resultado
 }
 
 botonDelete.addEventListener('click', () =>{
-    primerNumero = primerNumero.slice(0,-1)
+    segundoNumero = segundoNumero.slice(0,-1)
 
-    display.textContent = primerNumero || "0"
+    display.textContent = segundoNumero || "0"
 })
 
     
