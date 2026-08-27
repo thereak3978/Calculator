@@ -15,7 +15,7 @@ botonesNumero.forEach((boton) => {
     boton.addEventListener('click', () => {
 
         segundoNumero += boton.textContent
-        display.textContent = segundoNumero
+        display.textContent = Number(segundoNumero).toLocaleString()
         console.log(segundoNumero)
         
     })
