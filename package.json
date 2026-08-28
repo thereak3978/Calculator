@@ -1,6 +1,6 @@
 {
   "name": "calculadora",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "license": "ISC",
   "author": "Jose Angel Lagunes",
@@ -14,7 +14,7 @@
   },
   "build": {
     "appId":"com.Pixel.calculadora",
-    "productName": "Calculadora pro",
+    "productName": "Calculadora-Beta",
     "mac": {
       "target": "dmg"
     },
