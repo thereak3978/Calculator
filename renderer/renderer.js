@@ -11,6 +11,26 @@ let operacion= ""
 
 botonIgual.addEventListener('click', calcular)
 
+function agregarNumeroTeclado(numero) {
+    segundoNumero += numero
+    display.textContent = Number(segundoNumero).toLocaleString()
+    console.log(segundoNumero)
+}
+
+document.addEventListener('keydown', (event)=>{
+  
+    if(event.repeat)
+        return 
+
+    if (event.key >= '0' && event.key <= '9') 
+        agregarNumeroTeclado(event.key)
+    
+
+    if (event.key === 'Enter') 
+        calcular()
+
+})
+
 botonesNumero.forEach((boton) => {
     boton.addEventListener('click', () => {
 
