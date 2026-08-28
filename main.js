@@ -20,10 +20,12 @@ function createWindow(){
         }
     })
 
-    if(proccess.platform === 'win32')
-        Menu.setApplicationMenu(null);
+    if(process.platform === 'win32'){
+        Menu.setApplicationMenu(null)
+    }
+   
     mainWindow.loadFile('renderer/index.html')
-    mainWindow.webContents.openDevTools();
+    mainWindow.webContents.openDevTools({mode:'detah'})
 }
     
 
