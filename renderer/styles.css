@@ -1,8 +1,17 @@
 body {
     background-color: #989898;
+    height: 100vh;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .calculadora{
-    width: 350px;
+    width: min(100%, 365px);
+    max-height: 100vh;
+    aspect-ratio: 7 / 11;
+
     border-radius: 20px;
     background-color: #989898;
 }
@@ -14,6 +23,7 @@ body {
     padding: 20px;
     border-radius: 14px;
     font-size: 20px;
+    font-style: Arial;
 }
 
 .teclado{
@@ -32,8 +42,8 @@ body {
     border:#ed9874;
     color: rgb(255, 255, 255);
     border-radius: 12px;
-    padding: 20px;
-    font-size: 25px;
+    padding: clamp(8px, 3vw, 20px);
+    font-size: clamp(25px, 5vw, 50px);
     cursor: pointer;
     border: 2px solid rgb(50, 50, 50);
 }

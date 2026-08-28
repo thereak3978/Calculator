@@ -6,6 +6,10 @@ function createWindow(){
 
         width:365,
         height: 550,
+        maxWidth:  500,
+        maxHeight: 565,
+        minWidth: 250,
+        minHeight: 365,
         resizable: true,
         tittle: "calculator",
         webPreferences:{
