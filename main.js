@@ -1,4 +1,5 @@
-const {app, BrowserWindow, ipcMain } =require('electron')
+const {app, BrowserWindow, ipcMain, Menu } =require('electron');
+const { platform } = require('os');
 const path =require ('path')
 
 function createWindow(){
@@ -11,7 +12,7 @@ function createWindow(){
         minWidth: 250,
         minHeight: 365,
         resizable: true,
-        tittle: "calculator",
+        title: "Calculator",
         webPreferences:{
             preload: path.join(__dirname, 'preload.js'),
             contextIsolation: true,
@@ -19,6 +20,8 @@ function createWindow(){
         }
     })
 
+    if(proccess.platform === 'win32')
+        Menu.setApplicationMenu(null);
     mainWindow.loadFile('renderer/index.html')
     mainWindow.webContents.openDevTools();
 }
