@@ -25,7 +25,7 @@ function createWindow(){
     }
    
     mainWindow.loadFile('renderer/index.html')
-    mainWindow.webContents.openDevTools({mode:'detah'})
+    //mainWindow.webContents.openDevTools({mode:'detah'})
 }
     
 
