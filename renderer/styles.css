@@ -1,14 +1,15 @@
 body {
     background-color: #989898;
-    height: 100vh;
+    height: 103vh;
     margin: 0;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 .calculadora{
-    width: min(100%, 365px);
+    width: min(95%, 365px);
     max-height: 100vh;
     aspect-ratio: 7 / 11;
 
