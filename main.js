@@ -6,12 +6,13 @@ function createWindow(){
     const mainWindow= new BrowserWindow({
 
         width:365,
-        height: 550,
+        height: 463,
+        aspectRatio: 9 / 16,
         maxWidth:  500,
-        maxHeight: 565,
+        maxHeight: 634,
         minWidth: 250,
-        minHeight: 365,
-        resizable: true,
+        minHeight: 317,
+        resizable: false,
         title: "Calculator",
         webPreferences:{
             preload: path.join(__dirname, 'preload.js'),
